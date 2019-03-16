@@ -1,3 +1,6 @@
+
+http://markdownpad.com/
+
 # 标题1 #
 ## 标题2 ##
 ### 标题3 ###
@@ -149,6 +152,8 @@ ___
 ![图片1](C:\\Users\\david\\Desktop\\1.jpg)
 ### 方式二
 ![图片2][id]
+### 方式3
+![图片3](https://raw.githubusercontent.com/fumeidonga/markdownPic/master/httpurl.png)
 
 [id]:C:\Users\Administrator\Desktop\944365-2bd80b234ae9d155.png
 
