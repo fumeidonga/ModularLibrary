@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ModularLibrary.iml" filepath="$PROJECT_DIR$/ModularLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basemodule/basemodule.iml" filepath="$PROJECT_DIR$/basemodule/basemodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulecommon/modulecommon.iml" filepath="$PROJECT_DIR$/modulecommon/modulecommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basemodule/modulehttps/modulehttps.iml" filepath="$PROJECT_DIR$/basemodule/modulehttps/modulehttps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monitorbrightness/monitorbrightness.iml" filepath="$PROJECT_DIR$/monitorbrightness/monitorbrightness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testdemo/testdemo.iml" filepath="$PROJECT_DIR$/testdemo/testdemo.iml" />
+    </modules>
+  </component>
+</project>

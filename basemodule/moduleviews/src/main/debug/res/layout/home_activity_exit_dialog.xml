@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/join_pop_layout_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/join_pop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@drawable/skin_slide_left_sign_unsign"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/exit_title_relativelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+            <TextView
+                android:id="@+id/exit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="好消息"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/exit_title_desc"
+                android:layout_below="@+id/exit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="七猫免费小说上线啦，全场小说永久免费。"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/home_activity_exit_content"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:id="@+id/user_fragment_icon"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/user_fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="27dp"
+                android:layout_toRightOf="@id/user_fragment_icon"
+                android:textColor="#FF9744"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:visibility="gone"
+                tools:text="我的" />
+
+            <ImageView
+                android:id="@+id/user_fragment_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/join_ok"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="继续退出"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/join_cancel"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="去看看"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

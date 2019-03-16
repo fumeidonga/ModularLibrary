@@ -1,0 +1,13 @@
+//include ':app', ':modulemiddlecommon',
+
+//include ':basemodule:moduleviews'
+//include ':basemodule:moduleskin'
+//include ':basemodule:moduleqrcode'
+//include ':basemodule:modulepermission'
+//include ':basemodule:moduledatabases'
+include ':basemodule:modulehttps', ':monitorbrightness'
+//
+//include ':moduledownload', ':moduleshare', ':moduleimageload', ':modulepays'
+include ':modulecommon'
+
+include ':testdemo'

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name_share">ModuleShare</string>
+    <string name="app_name_view">Moduleview</string>
+    <string name="app_name_imageload">Moduleimageload</string>
+    <string name="app_name_pay">Modulepay</string>
+    <string name="app_name_qrcode">Moduleqrcode</string>
+</resources>
