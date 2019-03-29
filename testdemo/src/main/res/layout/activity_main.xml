@@ -52,5 +52,11 @@
         android:layout_height="wrap_content"
         android:text="test"
         />
+    <Button
+        android:id="@+id/show_dialog7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设计模式"
+        />
 
 </LinearLayout>

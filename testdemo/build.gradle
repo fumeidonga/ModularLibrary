@@ -43,6 +43,7 @@ dependencies {
     implementation deps.dagger.runtime
     implementation deps.dagger.android
     implementation deps.dagger.androidsupport
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor deps.dagger.androidprocessor
     annotationProcessor deps.dagger.compiler
 

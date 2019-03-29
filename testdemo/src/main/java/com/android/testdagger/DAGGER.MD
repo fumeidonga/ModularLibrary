@@ -211,7 +211,7 @@ Component需要引用到目标类的实例，Component会查找目标类中用In
 
 默认情况下，Android Studio不允许您生成的Dagger 2代码作为合法类，因为它们通常不会添加到源路径，
 但添加android-apt插件将添加这些文件到IDE类路径，并使您能够有更多的可见性 。
-从 Android Gradle plugin 2.2 开始，android-apt已弃用， android-apt不支持新的jack build toolchain
+从 Android Gradle plugin 2.2 开始，android-apt已弃用， android-apt不支持新的jack createMouse toolchain
 
    首先就是导入包
 

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.android.modulcommons.utils.DVLogUtils;
+import com.android.testdagger.DVActivityLifecycleCallbacks;
 import com.android.testdagger.R;
 import com.google.gson.Gson;
 
@@ -50,6 +51,15 @@ public class OneActivity extends AppCompatActivity implements OneContract.View {
         mPresenter = presenter;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // 判断是否从后台恢复, 且时间间隔符合要求, 显示广告页面
+        boolean isFromBackToFront = DVActivityLifecycleCallbacks.sAppState == DVActivityLifecycleCallbacks.STATE_BACK_TO_FRONT;
+        if (isFromBackToFront) {
+            DVLogUtils.e("");
+        }
+    }
     @Override
     public void onResume() {
         super.onResume();

@@ -25,10 +25,13 @@ xml、json等格式，图片可以使用PNG或JPG展现
 #### RETROFIT ####
 
 [参考文章](https://blog.csdn.net/carson_ho/article/details/73732076)
+[参考文章](https://www.jianshu.com/p/308f3c54abdd?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+
+![原理](https://github.com/fumeidonga/markdownPic/blob/master/http/2019-03-19_202239.png?raw=true)
 
 ![图片][id]
 
-[id]:E:\workings\mycode\google_samples\ModularLibrary\image_file\944365-2bd80b234ae9d155.png
+[id]:https://github.com/fumeidonga/markdownPic/blob/master/http/944365-2bd80b234ae9d155.png?raw=true
 
 准确来说，Retrofit 是一个 RESTful 的 HTTP 网络请求框架的封装
 网络请求的工作本质上是 OkHttp 完成，而 Retrofit 仅负责 网络请求接口的封装
@@ -42,17 +45,19 @@ app - retrofit - okhttp - server
 Retrofit把 网络请求的URL 分成了几部分设置
 
     第1部分：定义网络请求接口的实例(eg：Translation，就是一个response对象)，并在网络请求接口的注解设置
-    @GET("openapi.do?keyfrom=")
-    Call<Translation>  getCall();
+    public interface TranslationService{
+        @GET("openapi.do?keyfrom=")
+        Call<Translation>  getCall();
+    }
 
     第2部分：在创建Retrofit实例时通过.baseUrl()设置
     Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://fanyi.youdao.com/") //设置网络请求的Url地址
-                    .addConverterFactory(GsonConverterFactory.create()) //设置数据解析器
+                    .baseUrl("http://fanyi.youdao.com/") //设置网络请求的Url地址, Retrofit2 的baseUlr 必须以 /（斜线） 结束
+                    .addConverterFactory(GsonConverterFactory.create()) //设置数据解析器，这样Retrofit就会使用Gson将ResponseBody转换我们想要的类型
                     .build();
 
     第3部分：创建网络请求接口的实例
-    Translation request = retrofit.create(Translation.class);
+    TranslationService request = retrofit.create(TranslationService.class);
 
     第4部分：创建请求，传入参数
     Call<Translation> call = request.getCall();
@@ -75,6 +80,7 @@ Retrofit把 网络请求的URL 分成了几部分设置
     path='bc'
     baseurl='http://xxx.xxx.xxx/a/'
 
+![参数](https://github.com/fumeidonga/markdownPic/blob/master/http/httpparams.png?raw=true)
 
 1. @GET
 
@@ -173,6 +179,8 @@ Query = Url 中 ‘?’ 后面的 key-value
     Call<String> cate(@Query("cate") String cate);
 
 ### 数据解析器（Converter） ###
+Converter 使用转换器将http的响应体转换成对应的类型
+
 Retrofit支持多种数据解析方式,使用时需要在Gradle添加依赖
 
 Gson           	com.squareup.retrofit2:converter-gson:2.0.2
@@ -189,7 +197,19 @@ Wire	        com.squareup.retrofit2:converter-wire:2.0.2
 
 Scalars     	com.squareup.retrofit2:converter-scalars:2.0.2
 
+在默认情况下Retrofit只支持将HTTP的响应体转换换为ResponseBody
+
+但是可以用Converter将ResponseBody转换为我们想要的类型, 也可以自定义
+
+#### 自定义Converter ####
+![converter](https://github.com/fumeidonga/markdownPic/blob/master/http/2019-03-16_172859.png?raw=true)
+
 ### 网络请求适配器（CallAdapter） ###
+CallAdapter简单来说就是将Call转换成对应的类型
+
+eg：Call<Response> test(); =》 Flowable<Response> test();
+
+
 Retrofit支持多种网络请求适配器方式：guava、Java8和rxjava
 
 使用时如使用的是 Android 默认的 CallAdapter，则不需要添加网络请求适配器的依赖，
@@ -201,6 +221,14 @@ Java8	 com.squareup.retrofit2:adapter-java8:2.0.2
 
 rxjava	 com.squareup.retrofit2:adapter-rxjava:2.0.2
 
+com.squareup.retrofit2:retrofit:$versions.retrofit
+
+com.squareup.retrofit2:converter-gson:$versions.retrofit
+
+com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit
+
+#### 自定义Converter ####
+![converter](https://github.com/fumeidonga/markdownPic/blob/master/http/2019-03-16_172859.png?raw=true)
 
 ### 使用 Retrofit 的步骤共有7个 ###
 
@@ -276,9 +304,10 @@ Response<Reception> response = call.execute();
 
 见步骤6
 
+
+
+
 ### 动态改变网络请求根目录 ###
-
-
 
 
 

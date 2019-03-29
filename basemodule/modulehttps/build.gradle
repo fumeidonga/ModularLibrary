@@ -35,6 +35,7 @@ dependencies {
     //okhttp
     //https://github.com/square/okhttp
     api deps.okhttp3
+    api deps.okhttp3_logging_interceptor
     api deps.okio
 
     //retrofit

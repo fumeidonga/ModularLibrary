@@ -69,7 +69,7 @@ public class DVLogUtils {
 		PrettyFormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
 				.showThreadInfo(false)  // (Optional) Whether to show thread info or not. Default true
 				.methodCount(0)         // 决定打印多少行（每一行代表一个方法）默认：2
-				.tag("My custom tag")   // LOG TAG默认是PRETTYLOGGER
+				.tag("hrl")   // LOG TAG默认是PRETTYLOGGER
 				.methodOffset(0)        // Default 0
 				.logStrategy(new DVLogUtils.LogCatStrategy())
 				.build();

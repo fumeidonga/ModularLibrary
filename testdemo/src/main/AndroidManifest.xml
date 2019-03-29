@@ -50,7 +50,10 @@
         <activity android:name=".activitys.method_inject.FourActivity" />
         <activity android:name=".fragments.TasksActivity" />
         <activity android:name="com.android.testrxjava.HomeActivity" />
-        <activity android:name="com.android.test.TestActivity"></activity>
+        <activity android:name="com.android.test.TestActivity" />
+        <activity android:name="com.android.testdesignmodel.DesignModelActivity" />
+        <activity android:name="com.android.testdesignmodel.builder.BuilderActivity" />
+        <activity android:name="com.android.testdesignmodel.factory.FactoryActivity"></activity>
     </application>
 
 </manifest>

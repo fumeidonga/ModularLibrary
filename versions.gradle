@@ -94,6 +94,7 @@ versions.multidex                         = "1.0.2"
 //okhttp
 //https://github.com/square/okhttp
 versions.okhttp3                          = "3.10.0"
+versions.okhttp3_logging_interceptor      = "3.14.0"
 versions.okio                             = "1.14.0"
 versions.mockwebserver                    = "3.8.1"
 //https://github.com/square/retrofit
@@ -306,6 +307,7 @@ deps.butterknife_plugin                   = "com.jakewharton:butterknife-gradle-
 deps.butterknife_compiler                 = "com.jakewharton:butterknife-compiler:$versions.butterknife"
 
 deps.okhttp3                              = "com.squareup.okhttp3:okhttp:$versions.okhttp3"
+deps.okhttp3_logging_interceptor          = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3_logging_interceptor"
 deps.mock_web_server                      = "com.squareup.okhttp3:mockwebserver:$versions.mockwebserver"
 deps.okio                                 = "com.squareup.okio:okio:$versions.okio"
 deps.fastjson                             = "com.alibaba:fastjson:$versions.fastjson"

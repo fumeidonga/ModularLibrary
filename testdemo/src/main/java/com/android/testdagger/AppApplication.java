@@ -1,12 +1,15 @@
 package com.android.testdagger;
 
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.ContentProvider;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 
 import com.android.modulcommons.DVBaseApplication;
@@ -49,10 +52,46 @@ public class AppApplication extends DVBaseApplication implements HasActivityInje
     @Override
     public void onCreate() {
         super.onCreate();
+        DVLogUtils.defaultLog();
         DaggerAppComponent.builder().application(this).build().inject(this);
 
         mContext = getApplicationContext();
         DVLogUtils.dt(test1);
+        registerActivityLifecycleCallback();
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        DVLogUtils.dt();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        DVLogUtils.dt();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        DVLogUtils.dt();
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        DVLogUtils.dt();
+    }
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+    public void registerActivityLifecycleCallback() {
+        this.registerActivityLifecycleCallbacks(new DVActivityLifecycleCallbacks());
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        DVLogUtils.dt();
     }
 
     @Override
@@ -112,7 +151,7 @@ public class AppApplication extends DVBaseApplication implements HasActivityInje
 
 //    @Override
 //    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-//        return DaggerAppComponent.builder().application(this).build();
+//        return DaggerAppComponent.builder().application(this).createMouse();
 //    }
 
     @Override

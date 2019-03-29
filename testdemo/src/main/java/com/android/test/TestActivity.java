@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.android.modulcommons.utils.DVLogUtils;
+import com.android.testdagger.DVActivityLifecycleCallbacks;
 import com.android.testdagger.R;
 
 import java.util.List;
@@ -66,6 +67,15 @@ public class TestActivity extends Activity {
         initda();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // 判断是否从后台恢复, 且时间间隔符合要求, 显示广告页面
+        boolean isFromBackToFront = DVActivityLifecycleCallbacks.sAppState == DVActivityLifecycleCallbacks.STATE_BACK_TO_FRONT;
+        if (isFromBackToFront) {
+            DVLogUtils.e("");
+        }
+    }
     private void initda(){
         try {
             zhiKeResponseEntity = ZhiKeStrategy.gson.fromJson(s, ZhiKeResponseEntity.class);

@@ -11,6 +11,7 @@ import com.android.testdagger.activitys.one_mvp.OneActivity;
 import com.android.testdagger.activitys.three_absdagger.ThreeActivity;
 import com.android.testdagger.activitys.two_mvp_dagger.TwoActivity;
 import com.android.testdagger.fragments.TasksActivity;
+import com.android.testdesignmodel.DesignModelActivity;
 import com.android.testrxjava.HomeActivity;
 
 import java.util.Timer;
@@ -77,6 +78,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TestActivity.class));
+
+            }
+        });
+        findViewById(R.id.show_dialog7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DesignModelActivity.class));
 
             }
         });

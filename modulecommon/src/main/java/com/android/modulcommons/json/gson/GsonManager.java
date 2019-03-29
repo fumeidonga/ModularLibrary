@@ -1,7 +1,10 @@
-package com.android.modulcommons.json;
+package com.android.modulcommons.json.gson;
 
 import android.support.annotation.NonNull;
 
+import com.android.modulcommons.json.gson.adapter.DoubleDefaultAdapter;
+import com.android.modulcommons.json.gson.adapter.IntegerDefaultAdapter;
+import com.android.modulcommons.json.gson.adapter.LongDefaultAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -14,6 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * https://www.jianshu.com/p/3108f1e44155
+ */
 public class GsonManager {
 /**   一个数组
  [
@@ -62,6 +68,17 @@ public class GsonManager {
             gsonBuilder.setDateFormat("yyyy-MM-dd HH:mm:ss")
                     .serializeNulls()
                     .enableComplexMapKeySerialization();
+
+            /**
+             * 设置默认值
+             */
+            gsonBuilder.registerTypeAdapter(Integer.class, new IntegerDefaultAdapter());
+            gsonBuilder.registerTypeAdapter(int.class, new IntegerDefaultAdapter());
+            gsonBuilder.registerTypeAdapter(Double.class, new DoubleDefaultAdapter());
+            gsonBuilder.registerTypeAdapter(double.class, new DoubleDefaultAdapter());
+            gsonBuilder.registerTypeAdapter(Long.class, new LongDefaultAdapter());
+            gsonBuilder.registerTypeAdapter(long.class, new LongDefaultAdapter());
+
             gson = gsonBuilder.create();
         }
     }

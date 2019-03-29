@@ -31,7 +31,7 @@ android gradle 引入
 2. 字段注入：注入成员变量（不得为私有）。
 3. 方法注入：注入方法参数，基于 set 方法，使用 setter 方法，public void setCar(Car car)
 4. 接口注入：同方法注入，实现注入的方法
-5. 注解注入：Dagger 2，本次要学习的，build 后可以在build/generated/source/apt
+5. 注解注入：Dagger 2，本次要学习的，createMouse 后可以在build/generated/source/apt
 目录下看到 Dagger 2 编译时生成的成员属性注入类
 
 依赖注入顺序:

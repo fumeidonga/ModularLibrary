@@ -34,7 +34,7 @@ rxjava 基于观察者模式，分成4个大的部分， 观察者，被观察�
     其实我们常用的就2种：Schedulers.io()和AndroidSchedulers.mainThread()
 
 ### 参考 ###
-[demo](https://www.jianshu.com/p/0cd258eecf60)
+
 [文章1](https://www.jianshu.com/p/0cd258eecf60)
 
 ### 几个概念 ###

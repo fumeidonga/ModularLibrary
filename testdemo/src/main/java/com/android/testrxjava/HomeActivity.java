@@ -812,6 +812,9 @@ public class HomeActivity extends BaseActivity {
     }
 
 
+    /**
+     *
+     */
     @OnClick(R.id.bottom13)
     public void compose(){
 
@@ -823,13 +826,17 @@ public class HomeActivity extends BaseActivity {
             }
         });
 
-        Disposable disposable1 = observable.compose(new ObservableTransformer() {
+        Observable observableCompose = observable.compose(applySchedulers());
+
+        Observable observableCompose1 = observable.compose(new ObservableTransformer() {
             @Override
             public ObservableSource apply(Observable upstream) {
                 return upstream.subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread());
             }
-        }).subscribe(new Consumer() {
+        });
+
+        Disposable disposable1 = observableCompose1.subscribe(new Consumer() {
             @Override
             public void accept(Object o) throws Exception {
                 DVLogUtils.dt();
@@ -837,7 +844,27 @@ public class HomeActivity extends BaseActivity {
         });
     }
 
+    /**
+     * 供给他一个Observable它会返回给你另一个Observable
+     * @param <T>
+     * @return
+     */
+    private <T> ObservableTransformer<T, T> applySchedulers() {
+        return new ObservableTransformer<T, T>() {
+            @Override
+            public ObservableSource<T> apply(Observable<T> upstream) {
+//                return upstream.compose(apiTransformer.<T>transformer()).
+//                    subscribeOn(Schedulers.io())
+//                    .observeOn(AndroidSchedulers.mainThread());
+                return upstream.subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread());
+            }
+        };
+    }
 
+    /**
+     * Observable 跟flowable的转换
+     */
     @OnClick(R.id.bottom14)
     public void toflowable(){
 
