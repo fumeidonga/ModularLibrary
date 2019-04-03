@@ -2,6 +2,7 @@ package com.android.testdagger;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,7 @@ import java.util.TimerTask;
 public class MainActivity extends Activity {
 
     private Timer timer;
+    ScreenOnOffReceiver mScreenOnOffReceiver = null;
     private TimerTask timerTask= new TimerTask(){
 
         @Override
@@ -88,11 +90,29 @@ public class MainActivity extends Activity {
 
             }
         });
+        startScreenBroadcastReceiver();
+    }
+
+    private void startScreenBroadcastReceiver(){
+        if(mScreenOnOffReceiver == null) {
+            mScreenOnOffReceiver = new ScreenOnOffReceiver();
+        }
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_SCREEN_ON);
+        filter.addAction(Intent.ACTION_SCREEN_OFF);
+        filter.addAction(Intent.ACTION_USER_PRESENT);
+        registerReceiver(mScreenOnOffReceiver, filter);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(mScreenOnOffReceiver);
     }
 
     public void init(){

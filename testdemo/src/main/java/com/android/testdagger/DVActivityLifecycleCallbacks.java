@@ -17,6 +17,8 @@ public class DVActivityLifecycleCallbacks implements Application.ActivityLifecyc
     public static int sAppState = STATE_NORMAL;
     private int mVisibleActivityCount = 0;
 
+    public static boolean mIsScreenOff = false;
+
 
     public DVActivityLifecycleCallbacks() {
         DVLogUtils.dt();
@@ -34,8 +36,14 @@ public class DVActivityLifecycleCallbacks implements Application.ActivityLifecyc
         // 每有一个activity可见都会走该方法，mVisibleActivityCount会增1。
         mVisibleActivityCount++;
         if (mVisibleActivityCount == 1) {
-            // 从后台进入前台
-            sAppState = STATE_BACK_TO_FRONT;
+            if(mIsScreenOff){
+                mIsScreenOff = false;
+                // 否则是正常状态
+                sAppState = STATE_NORMAL;
+            } else {
+                // 从后台进入前台
+                sAppState = STATE_BACK_TO_FRONT;
+            }
         } else {
             // 否则是正常状态
             sAppState = STATE_NORMAL;
