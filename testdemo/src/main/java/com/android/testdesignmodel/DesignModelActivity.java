@@ -7,8 +7,16 @@ import android.os.Bundle;
 import com.android.modulcommons.utils.DVLogUtils;
 import com.android.testdagger.DVActivityLifecycleCallbacks;
 import com.android.testdagger.R;
+import com.android.testdesignmodel.adapter.Adapter;
+import com.android.testdesignmodel.adapter.AdapterActivity;
+import com.android.testdesignmodel.adapter.ITarget;
+import com.android.testdesignmodel.adapter.ThreeAdaptee;
 import com.android.testdesignmodel.builder.BuilderActivity;
 import com.android.testdesignmodel.factory.FactoryActivity;
+import com.android.testdesignmodel.strategy.DVStrategyA;
+import com.android.testdesignmodel.strategy.DVStrategyB;
+import com.android.testdesignmodel.strategy.IDVStrategy;
+import com.android.testdesignmodel.strategy.StragetyFactory;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -53,6 +61,14 @@ public class DesignModelActivity extends Activity {
     @OnClick(R.id.bottom5)
     public void begin5(){
 
+        IDVStrategy idvStrategy = new DVStrategyA();
+        IDVStrategy idvStrategyb = new DVStrategyB();
+        idvStrategy.strategy();
+        idvStrategyb.strategy();
+
+//        DVLogUtils.d(StragetyFactory.getInstance().strategy(0));
+        StragetyFactory.getInstance().strategy(0).strategy();
+
     }
     @OnClick(R.id.bottom6)
     public void begin6(){
@@ -60,6 +76,11 @@ public class DesignModelActivity extends Activity {
     }
     @OnClick(R.id.bottom7)
     public void begin7(){
+        ITarget target = new Adapter();
+        ((Adapter) target).setIAdaptee(new ThreeAdaptee());
+        target.charge();
+
+        startActivitys(AdapterActivity.class);
 
     }
     @OnClick(R.id.bottom8)
