@@ -1,5 +1,7 @@
 package com.android.testdesignmodel.singleton;
 
+import java.lang.reflect.Constructor;
+
 public class SingletonModule {
 
 
@@ -18,6 +20,13 @@ public class SingletonModule {
             }
         }
         return mSingletonModule;
+    }
+
+    public void testClass() throws Exception{
+        Class classd = SingletonModule.class;
+        Constructor constructor = classd.getDeclaredConstructor(null);
+        constructor.setAccessible(true);
+        SingletonModule singletonModule =  (SingletonModule)constructor.newInstance(null);
     }
 
 
