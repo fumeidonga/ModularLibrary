@@ -50,29 +50,6 @@ public class FactoryActivity extends Activity {
         boolean isFromBackToFront = DVActivityLifecycleCallbacks.sAppState == DVActivityLifecycleCallbacks.STATE_BACK_TO_FRONT;
         if (isFromBackToFront) {
             DVLogUtils.e("");
-            createADView();
-        }
-    }
-
-    private void createADView() {
-        WindowManager.LayoutParams params = new WindowManager.LayoutParams();
-        params.x = 0;
-        params.y = 0;
-        params.width = WindowManager.LayoutParams.MATCH_PARENT;
-        params.height = WindowManager.LayoutParams.MATCH_PARENT;
-        TextView textView = new TextView(this);
-        textView.setText("test");
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView.setVisibility(View.GONE);
-            }
-        });
-        try {
-            getWindowManager().addView(textView, params);
-        } catch (Exception e) {
-
-            DVLogUtils.e(e.toString());
         }
     }
 
