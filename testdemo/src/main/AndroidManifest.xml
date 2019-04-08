@@ -53,7 +53,8 @@
         <activity android:name="com.android.test.TestActivity" />
         <activity android:name="com.android.testdesignmodel.DesignModelActivity" />
         <activity android:name="com.android.testdesignmodel.builder.BuilderActivity" />
-        <activity android:name="com.android.testdesignmodel.factory.FactoryActivity"></activity>
+        <activity android:name="com.android.testdesignmodel.factory.FactoryActivity" />
+        <activity android:name="com.android.testdesignmodel.adapter.AdapterActivity"></activity>
     </application>
 
 </manifest>
