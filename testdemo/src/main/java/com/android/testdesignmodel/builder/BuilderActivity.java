@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.MarkdownUtils;
 import com.android.modulcommons.utils.DVLogUtils;
 import com.android.testdagger.DVActivityLifecycleCallbacks;
 import com.android.testdagger.R;
@@ -28,6 +29,8 @@ public class BuilderActivity extends Activity {
     Button button;
     @BindView(R.id.button3)
     Button button3;
+    @BindView(R.id.readme)
+    Button readme;
     @BindView(R.id.textView3)
     TextView textView3;
 
@@ -69,5 +72,10 @@ public class BuilderActivity extends Activity {
         sb.append("\r\n");
 
         textView3.setText(sb.toString());
+    }
+    @OnClick(R.id.readme)
+    public void readme(){
+
+        MarkdownUtils.setData(this, "testdesignmodel/builder/建造者.MD");
     }
 }

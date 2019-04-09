@@ -7,6 +7,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.MarkdownUtils;
 import com.android.modulcommons.utils.DVLogUtils;
 import com.android.testdagger.DVActivityLifecycleCallbacks;
 import com.android.testdagger.R;
@@ -99,5 +100,21 @@ public class FactoryActivity extends Activity {
         sb.append(abstractFactory1.createMouse().build().toString());
 
         textView6.setText(sb.toString());
+    }
+
+    @OnClick(R.id.readme1)
+    public void readme1(){
+
+        MarkdownUtils.setData(this, "testdesignmodel/factory/简单工厂.md");
+    }
+    @OnClick(R.id.readme2)
+    public void readme2(){
+
+        MarkdownUtils.setData(this, "testdesignmodel/factory/工厂.md");
+    }
+    @OnClick(R.id.readme3)
+    public void readme3(){
+
+        MarkdownUtils.setData(this, "testdesignmodel/factory/抽象工厂.md");
     }
 }

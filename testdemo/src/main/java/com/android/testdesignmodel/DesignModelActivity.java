@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.android.MarkdownUtils;
 import com.android.modulcommons.utils.DVLogUtils;
 import com.android.testdagger.DVActivityLifecycleCallbacks;
 import com.android.testdagger.R;
@@ -39,6 +40,10 @@ public class DesignModelActivity extends Activity {
             DVLogUtils.e("");
         }
     }
+    @OnClick(R.id.bottom)
+    public void begin0(){
+        MarkdownUtils.setData(this, "testdesignmodel/singleton/单例.md");
+    }
     @OnClick(R.id.bottom0)
     public void begin(){
         startActivitys(BuilderActivity.class);
@@ -50,6 +55,7 @@ public class DesignModelActivity extends Activity {
     @OnClick(R.id.bottom2)
     public void begin2(){
 
+        MarkdownUtils.setData(this, "testdesignmodel/singleton/单例.md");
     }
     @OnClick(R.id.bottom3)
     public void begin3(){
@@ -69,6 +75,7 @@ public class DesignModelActivity extends Activity {
 
 //        DVLogUtils.d(StragetyFactory.getInstance().strategy(0));
         StragetyFactory.getInstance().strategy(0).strategy();
+        MarkdownUtils.setData(this, "testdesignmodel/strategy/策略模式.md");
 
     }
     @OnClick(R.id.bottom6)

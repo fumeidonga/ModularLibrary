@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.android.MarkdownUtils;
 import com.android.testdagger.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class AdapterActivity extends Activity {
 
@@ -29,5 +31,10 @@ public class AdapterActivity extends Activity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setHasFixedSize(true);
 
+    }
+    @OnClick(R.id.button7)
+    public void readme(){
+
+        MarkdownUtils.setData(this, "testdesignmodel/builder/建造者.MD");
     }
 }
