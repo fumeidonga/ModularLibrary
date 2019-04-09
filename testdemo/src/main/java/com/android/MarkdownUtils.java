@@ -38,9 +38,9 @@ public class MarkdownUtils {
 //                这个问题是由于源文件中存在特殊字符导致javascript库解析异常
 //        解决方案：直接上代码
         String ss = sb.toString();
-        ss=ss.replace("\"","\\"+"\"");
-        ss=ss.replace("\'","\\"+"\'");
-        ss=ss.replace("//","\\/\\/");
+//        ss=ss.replace("\"","\\"+"\"");
+//        ss=ss.replace("\'","\\"+"\'");
+//        ss=ss.replace("//","\\/\\/");
         return ss;
     }
 
