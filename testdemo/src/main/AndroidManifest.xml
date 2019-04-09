@@ -56,7 +56,8 @@
         <activity android:name="com.android.testdesignmodel.factory.FactoryActivity" />
         <activity android:name="com.android.testdesignmodel.adapter.AdapterActivity" />
         <activity android:name="com.android.testdesignmodel.proxy.ProxyActivity" />
-        <activity android:name="com.android.MarkdownWebviewActivity"></activity>
+        <activity android:name="com.android.MarkdownWebviewActivity" />
+        <activity android:name=".DaggerTestActivity"></activity>
     </application>
 
 </manifest>

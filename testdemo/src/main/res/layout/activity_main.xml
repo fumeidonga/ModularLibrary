@@ -10,51 +10,51 @@
 
     <Button
         android:id="@+id/show_dialog"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="one activity"
+        android:text="dagger test"
         />
     <Button
         android:id="@+id/show_dialog1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="two activity"
+        android:text=""
         />
     <Button
         android:id="@+id/show_dialog2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="three activity"
+        android:text=""
         />
     <Button
         android:id="@+id/show_dialog3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="four activity"
+        android:text=""
         />
 
     <Button
         android:id="@+id/show_dialog4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="fragment"
+        android:text=""
         />
 
     <Button
         android:id="@+id/show_dialog5"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rxjava ref"
+        android:text="rxjava test"
         />
     <Button
         android:id="@+id/show_dialog6"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test"
+        android:text="ad strategy test"
         />
     <Button
         android:id="@+id/show_dialog7"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="设计模式"
         />

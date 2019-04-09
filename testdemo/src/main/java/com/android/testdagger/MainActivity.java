@@ -34,38 +34,36 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
         findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MainActivity.this, OneActivity.class));
+                startActivity(new Intent(MainActivity.this, DaggerTestActivity.class));
 
             }
         });
         findViewById(R.id.show_dialog1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, TwoActivity.class));
+
             }
         });
         findViewById(R.id.show_dialog2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ThreeActivity.class));
 
             }
         });
         findViewById(R.id.show_dialog3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, FourActivity.class));
 
             }
         });
         findViewById(R.id.show_dialog4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, TasksActivity.class));
 
             }
         });
