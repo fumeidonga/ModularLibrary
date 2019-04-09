@@ -13,6 +13,7 @@ import com.android.testdesignmodel.adapter.ITarget;
 import com.android.testdesignmodel.adapter.ThreeAdaptee;
 import com.android.testdesignmodel.builder.BuilderActivity;
 import com.android.testdesignmodel.factory.FactoryActivity;
+import com.android.testdesignmodel.proxy.ProxyActivity;
 import com.android.testdesignmodel.strategy.DVStrategyA;
 import com.android.testdesignmodel.strategy.DVStrategyB;
 import com.android.testdesignmodel.strategy.IDVStrategy;
@@ -52,7 +53,7 @@ public class DesignModelActivity extends Activity {
     }
     @OnClick(R.id.bottom3)
     public void begin3(){
-
+        startActivitys(ProxyActivity.class);
     }
     @OnClick(R.id.bottom4)
     public void begin4(){
