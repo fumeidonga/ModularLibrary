@@ -28,7 +28,10 @@ public class DynamicProxy implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        DVLogUtils.d(method.getName());
+        DVLogUtils.d("动态代理 调用方法：" + method.getName());
+        if(method.getName().equals("pay") || method.getName().equals("buy")) {
+            //do somethings
+        }
         Object result = method.invoke(object, args);
         return result;
     }

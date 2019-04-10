@@ -13,6 +13,7 @@ import com.android.testdesignmodel.adapter.AdapterActivity;
 import com.android.testdesignmodel.adapter.ITarget;
 import com.android.testdesignmodel.adapter.ThreeAdaptee;
 import com.android.testdesignmodel.builder.BuilderActivity;
+import com.android.testdesignmodel.facade.FacadeActivity;
 import com.android.testdesignmodel.factory.FactoryActivity;
 import com.android.testdesignmodel.proxy.ProxyActivity;
 import com.android.testdesignmodel.strategy.DVStrategyA;
@@ -42,7 +43,7 @@ public class DesignModelActivity extends Activity {
     }
     @OnClick(R.id.bottom)
     public void begin0(){
-        MarkdownUtils.setData(this, "testdesignmodel/singleton/单例.md");
+        MarkdownUtils.setData(this, "testdesignmodel/设计模式.MD");
     }
     @OnClick(R.id.bottom0)
     public void begin(){
@@ -64,6 +65,7 @@ public class DesignModelActivity extends Activity {
     @OnClick(R.id.bottom4)
     public void begin4(){
 
+        startActivitys(FacadeActivity.class);
     }
     @OnClick(R.id.bottom5)
     public void begin5(){
