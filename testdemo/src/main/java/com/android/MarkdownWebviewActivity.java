@@ -25,7 +25,7 @@ public class MarkdownWebviewActivity extends Activity {
                 String s = MarkdownUtils.getData(MarkdownWebviewActivity.this);
                 webView.loadUrl("javascript:marked(\'"+ s +"\')");
             } catch (Exception e) {
-                DVLogUtils.d(e);
+                DVLogUtils.e(e, e.toString());
             }
 
         }

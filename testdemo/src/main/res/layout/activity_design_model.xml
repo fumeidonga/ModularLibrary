@@ -20,23 +20,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/fadedddd"
+                android:text="结构型设计模式区别"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bottom7"
+                android:text="适配器"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
                 android:id="@+id/bottom0"
                 android:text="建造者"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bottom1"
-                android:text="工厂"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bottom2"
-                android:text="单例"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bottom3"
-                android:text="代理"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
@@ -45,18 +40,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/bottom1"
+                android:text="工厂"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bottom3"
+                android:text="代理"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bottom2"
+                android:text="单例"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
                 android:id="@+id/bottom5"
                 android:text="策略"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-                android:id="@+id/bottom6"
-                android:text="装饰"
+                android:id="@+id/muban"
+                android:text="模板"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-                android:id="@+id/bottom7"
-                android:text="适配器"
+                android:id="@+id/bottom6"
+                android:text="装饰"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button

@@ -20,6 +20,9 @@ import com.android.testdesignmodel.strategy.DVStrategyA;
 import com.android.testdesignmodel.strategy.DVStrategyB;
 import com.android.testdesignmodel.strategy.IDVStrategy;
 import com.android.testdesignmodel.strategy.StragetyFactory;
+import com.android.testdesignmodel.template.ABSKuaiDi;
+import com.android.testdesignmodel.template.PostToA;
+import com.android.testdesignmodel.template.PostToB;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -45,6 +48,10 @@ public class DesignModelActivity extends Activity {
     public void begin0(){
         MarkdownUtils.setData(this, "testdesignmodel/设计模式.MD");
     }
+    @OnClick(R.id.fadedddd)
+    public void fadedddd(){
+        MarkdownUtils.setData(this, "testdesignmodel/结构设计模式区别.MD");
+    }
     @OnClick(R.id.bottom0)
     public void begin(){
         startActivitys(BuilderActivity.class);
@@ -55,7 +62,6 @@ public class DesignModelActivity extends Activity {
     }
     @OnClick(R.id.bottom2)
     public void begin2(){
-
         MarkdownUtils.setData(this, "testdesignmodel/singleton/单例.md");
     }
     @OnClick(R.id.bottom3)
@@ -80,10 +86,6 @@ public class DesignModelActivity extends Activity {
         MarkdownUtils.setData(this, "testdesignmodel/strategy/策略模式.md");
 
     }
-    @OnClick(R.id.bottom6)
-    public void begin6(){
-
-    }
     @OnClick(R.id.bottom7)
     public void begin7(){
         ITarget target = new Adapter();
@@ -91,6 +93,21 @@ public class DesignModelActivity extends Activity {
         target.charge();
 
         startActivitys(AdapterActivity.class);
+
+    }
+    @OnClick(R.id.muban)
+    public void muban(){
+        DVLogUtils.d("----派送A----");
+        ABSKuaiDi postA=new PostToA();
+        postA.post();
+        DVLogUtils.d("----派送B----");
+        ABSKuaiDi postB=new PostToB();
+        postB.post();
+        MarkdownUtils.setData(this, "testdesignmodel/template/模板.MD");
+    }
+
+    @OnClick(R.id.bottom6)
+    public void begin6(){
 
     }
     @OnClick(R.id.bottom8)
