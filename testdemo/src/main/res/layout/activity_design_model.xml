@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/bottom8"
-                android:text=" 链式"
+                android:text=" 责任链"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

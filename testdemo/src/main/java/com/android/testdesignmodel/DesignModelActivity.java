@@ -109,10 +109,12 @@ public class DesignModelActivity extends Activity {
     @OnClick(R.id.bottom6)
     public void begin6(){
 
+        MarkdownUtils.setData(this, "testdesignmodel/template/装饰.MD");
     }
     @OnClick(R.id.bottom8)
     public void begin8(){
 
+        MarkdownUtils.setData(this, "testdesignmodel/lianshi/链式.MD");
     }
 
     public <T> void startActivitys(Class<T> tClass){
