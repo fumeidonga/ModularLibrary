@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.android.MarkdownUtils;
-import com.android.testdagger.MainActivity;
 import com.android.testdagger.R;
 
 import butterknife.ButterKnife;
@@ -62,12 +61,12 @@ public class MainAndroidActivity extends Activity {
     @OnClick(R.id.show_dialog8)
     public void button8(){
 
-        MarkdownUtils.setData(MainAndroidActivity.this, "监听应用前后台切换.md");
+        MarkdownUtils.setData(MainAndroidActivity.this, "android/监听应用前后台切换.md");
     }
 
     @OnClick(R.id.show_dialog9)
     public void button9(){
-        MarkdownUtils.setData(MainAndroidActivity.this, "监听锁屏.md");
+        MarkdownUtils.setData(MainAndroidActivity.this, "android/监听锁屏.md");
 
     }
 }
