@@ -55,6 +55,14 @@ public class ZhiKeStrategy {
                 networkList.add(feedAd);
             }
         }
+
+        //call requires api 24
+        /*tempList.forEach(feedAd -> {
+            if(!isFeedAdCountMax(feedAd)){
+                localList.add(feedAd);
+                networkList.add(feedAd);
+            }
+        });*/
     }
 
     /**
