@@ -35,7 +35,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true">
-        <activity android:name="com.android.performance.MainPerformanceActivity"></activity>
+        <activity android:name="com.android.android.MainAndroidActivity"></activity>
+        <activity android:name="com.android.performance.MainPerformanceActivity" />
         <activity android:name="com.android.performance.LoadingPerformanceActivity" />
         <activity android:name="com.android.java.JavaMainActivity" />
         <activity android:name=".MainActivity">

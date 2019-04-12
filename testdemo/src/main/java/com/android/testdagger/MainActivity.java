@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.android.MarkdownUtils;
+import com.android.android.MainAndroidActivity;
 import com.android.java.JavaMainActivity;
+import com.android.performance.MainPerformanceActivity;
 import com.android.test.TestActivity;
 import com.android.testdagger.activitys.method_inject.FourActivity;
 import com.android.testdagger.activitys.one_mvp.OneActivity;
@@ -69,7 +71,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.show_dialog4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(MainActivity.this, MainPerformanceActivity.class));
             }
         });
         findViewById(R.id.show_dialog5).setOnClickListener(new View.OnClickListener() {
@@ -96,14 +98,13 @@ public class MainActivity extends Activity {
         findViewById(R.id.show_dialog8).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MarkdownUtils.setData(MainActivity.this, "监听应用前后台切换.md");
 
+                startActivity(new Intent(MainActivity.this, MainAndroidActivity.class));
             }
         });
         findViewById(R.id.show_dialog9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MarkdownUtils.setData(MainActivity.this, "监听锁屏.md");
 
             }
         });
