@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:textAllCaps="false"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Lambda"
         />
 
     <Button
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text=""
+        android:text="性能优化"
         />
 
     <Button
@@ -65,6 +65,20 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="设计模式"
+        />
+    <Button
+        android:id="@+id/show_dialog8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="监听应用前后台切换"
+        />
+    <Button
+        android:id="@+id/show_dialog9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="锁屏监听"
         />
 
 </LinearLayout>

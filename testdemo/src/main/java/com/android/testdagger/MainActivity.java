@@ -6,6 +6,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 
+import com.android.MarkdownUtils;
 import com.android.java.JavaMainActivity;
 import com.android.test.TestActivity;
 import com.android.testdagger.activitys.method_inject.FourActivity;
@@ -55,12 +56,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
+                MarkdownUtils.setData(MainActivity.this, "lifecycle/Lifecycle.md");
             }
         });
         findViewById(R.id.show_dialog3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                MarkdownUtils.setData(MainActivity.this, "lamada/LAMADA.MD");
             }
         });
         findViewById(R.id.show_dialog4).setOnClickListener(new View.OnClickListener() {
@@ -87,6 +90,20 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, DesignModelActivity.class));
+
+            }
+        });
+        findViewById(R.id.show_dialog8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MarkdownUtils.setData(MainActivity.this, "监听应用前后台切换.md");
+
+            }
+        });
+        findViewById(R.id.show_dialog9).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MarkdownUtils.setData(MainActivity.this, "监听锁屏.md");
 
             }
         });
