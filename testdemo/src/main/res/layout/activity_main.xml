@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:text="dagger test"
         />
+
     <Button
         android:id="@+id/show_dialog1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        />
+        android:text="Java" />
     <Button
         android:id="@+id/show_dialog2"
         android:layout_width="match_parent"

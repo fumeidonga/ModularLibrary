@@ -6,6 +6,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 
+import com.android.java.JavaMainActivity;
 import com.android.test.TestActivity;
 import com.android.testdagger.activitys.method_inject.FourActivity;
 import com.android.testdagger.activitys.one_mvp.OneActivity;
@@ -47,6 +48,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
+                startActivity(new Intent(MainActivity.this, JavaMainActivity.class));
             }
         });
         findViewById(R.id.show_dialog2).setOnClickListener(new View.OnClickListener() {
