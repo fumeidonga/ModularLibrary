@@ -12,24 +12,28 @@
         android:id="@+id/show_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="one activity"
         />
     <Button
         android:id="@+id/show_dialog1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="two activity"
         />
     <Button
         android:id="@+id/show_dialog2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="three activity"
         />
     <Button
         android:id="@+id/show_dialog3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="four activity"
         />
 
@@ -37,6 +41,7 @@
         android:id="@+id/show_dialog4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="fragment"
         />
 

@@ -12,6 +12,7 @@
         android:id="@+id/show_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="dagger test"
         />
 
@@ -19,16 +20,19 @@
         android:id="@+id/show_dialog1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Java" />
+
     <Button
         android:id="@+id/show_dialog2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        />
+        android:textAllCaps="false"
+        android:text="lifecycle" />
     <Button
         android:id="@+id/show_dialog3"
         android:layout_width="match_parent"
+        android:textAllCaps="false"
         android:layout_height="wrap_content"
         android:text=""
         />
@@ -37,6 +41,7 @@
         android:id="@+id/show_dialog4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text=""
         />
 
@@ -44,18 +49,21 @@
         android:id="@+id/show_dialog5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="rxjava test"
         />
     <Button
         android:id="@+id/show_dialog6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="ad strategy test"
         />
     <Button
         android:id="@+id/show_dialog7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="设计模式"
         />
 
