@@ -15,6 +15,9 @@ import com.android.testdesignmodel.adapter.ThreeAdaptee;
 import com.android.testdesignmodel.builder.BuilderActivity;
 import com.android.testdesignmodel.facade.FacadeActivity;
 import com.android.testdesignmodel.factory.FactoryActivity;
+import com.android.testdesignmodel.lianshi.BaseHandlerResult;
+import com.android.testdesignmodel.lianshi.LianShiA;
+import com.android.testdesignmodel.lianshi.LianShiB;
 import com.android.testdesignmodel.proxy.ProxyActivity;
 import com.android.testdesignmodel.strategy.DVStrategyA;
 import com.android.testdesignmodel.strategy.DVStrategyB;
@@ -23,6 +26,9 @@ import com.android.testdesignmodel.strategy.StragetyFactory;
 import com.android.testdesignmodel.template.ABSKuaiDi;
 import com.android.testdesignmodel.template.PostToA;
 import com.android.testdesignmodel.template.PostToB;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -111,8 +117,28 @@ public class DesignModelActivity extends Activity {
 
         MarkdownUtils.setData(this, "testdesignmodel/template/装饰.MD");
     }
+
+    public boolean isClick ;
     @OnClick(R.id.bottom8)
     public void begin8(){
+
+        String url;
+        if(!isClick) {
+            url = "";
+            isClick = true;
+        } else {
+            url = "test";
+            isClick = false;
+        }
+
+        BaseHandlerResult handlerResultA = new LianShiA();
+        BaseHandlerResult handlerResultB = new LianShiB();
+        handlerResultA.setmNextHandler(handlerResultB);
+
+        handlerResultA.handleResult(url);
+
+
+
 
         MarkdownUtils.setData(this, "testdesignmodel/lianshi/链式.MD");
     }

@@ -1,5 +1,7 @@
 package com.android.testdesignmodel.lianshi;
 
+import android.text.TextUtils;
+
 import com.android.modulcommons.utils.DVLogUtils;
 
 /**
@@ -9,7 +11,12 @@ import com.android.modulcommons.utils.DVLogUtils;
  */
 public class LianShiB extends BaseHandlerResult {
     @Override
-    void handleResult(String url) {
+    public boolean handleResult(String url) {
         DVLogUtils.d("责任链B");
+        if(TextUtils.isEmpty(url)) {
+            return handleNext(url);
+        }
+        DVLogUtils.d("责任链B " + url);
+        return true;
     }
 }
