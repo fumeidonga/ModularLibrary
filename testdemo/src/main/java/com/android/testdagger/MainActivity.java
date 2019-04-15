@@ -43,7 +43,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MainActivity.this, DaggerTestActivity.class));
 
             }
         });
@@ -58,7 +57,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                MarkdownUtils.setData(MainActivity.this, "lifecycle/Lifecycle.md");
             }
         });
         findViewById(R.id.show_dialog3).setOnClickListener(new View.OnClickListener() {
@@ -71,8 +69,9 @@ public class MainActivity extends Activity {
         findViewById(R.id.show_dialog4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MainPerformanceActivity.class));
+
             }
+
         });
         findViewById(R.id.show_dialog5).setOnClickListener(new View.OnClickListener() {
             @Override

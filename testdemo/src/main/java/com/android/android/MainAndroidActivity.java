@@ -1,9 +1,13 @@
 package com.android.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.MarkdownUtils;
+import com.android.performance.MainPerformanceActivity;
+import com.android.testdagger.DaggerTestActivity;
+import com.android.testdagger.MainActivity;
 import com.android.testdagger.R;
 
 import butterknife.ButterKnife;
@@ -20,7 +24,7 @@ public class MainAndroidActivity extends Activity {
 
     @OnClick(R.id.show_dialog0)
     public void button0(){
-
+        startActivity(new Intent(this, MainPerformanceActivity.class));
     }
 
     @OnClick(R.id.show_dialog1)
@@ -51,11 +55,13 @@ public class MainAndroidActivity extends Activity {
     @OnClick(R.id.show_dialog6)
     public void button6(){
 
+        startActivity(new Intent(this, DaggerTestActivity.class));
     }
 
     @OnClick(R.id.show_dialog7)
     public void button7(){
 
+        MarkdownUtils.setData(this, "lifecycle/Lifecycle.md");
     }
 
     @OnClick(R.id.show_dialog8)
