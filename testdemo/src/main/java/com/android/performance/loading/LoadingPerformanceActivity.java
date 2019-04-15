@@ -1,4 +1,4 @@
-package com.android.performance;
+package com.android.performance.loading;
 
 import android.app.Activity;
 import android.os.Bundle;
