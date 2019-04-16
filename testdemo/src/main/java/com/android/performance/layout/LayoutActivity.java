@@ -26,16 +26,19 @@ public class LayoutActivity extends Activity {
 
     @OnClick(R.id.show_dialog1)
     public void button1(){
+        MarkdownUtils.setData(this, "android/Android硬件加速原理.MD");
 
     }
 
     @OnClick(R.id.show_dialog2)
     public void button2(){
+        MarkdownUtils.setData(this, "android/layout优化.MD");
 
     }
 
     @OnClick(R.id.show_dialog3)
     public void button3(){
+        MarkdownUtils.setData(this, "android/LayoutInflater.MD");
 
     }
 

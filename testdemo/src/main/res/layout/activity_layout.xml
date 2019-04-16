@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@android:color/holo_red_dark"
-                android:text=""
+                android:text="硬件加速原理"
                 />
             <Button
                 android:id="@+id/show_dialog2"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@android:color/holo_red_dark"
-                android:text=""
+                android:text="read me"
                 />
             <Button
                 android:id="@+id/show_dialog3"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textColor="@android:color/holo_red_dark"
-                android:text=""
+                android:text="layout inflater"
                 />
             <Button
                 android:id="@+id/show_dialog4"

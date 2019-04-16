@@ -22,6 +22,11 @@ public class MainPerformanceActivity extends Activity {
     }
 
 //    @AopLog
+    @OnClick(R.id.show_dialog)
+    public void button(){
+        MarkdownUtils.setData(this, "android/性能优化.MD");
+    }
+
     @OnClick(R.id.show_dialog0)
     public void button0(){
         startActivity(new Intent(this, LayoutActivity.class));
