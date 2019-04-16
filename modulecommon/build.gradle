@@ -178,7 +178,7 @@ dependencies {
     }
     //If you are using Kotlin, replace annotationProcessor with kapt
     annotationProcessor deps.butterknife_compiler
-    kapt deps.butterknife_compiler
+    kapt                deps.butterknife_compiler
     */
 
     //dagger
