@@ -21,6 +21,7 @@ public class MainPerformanceActivity extends Activity {
         ButterKnife.bind(this);
     }
 
+//    @AopLog
     @OnClick(R.id.show_dialog0)
     public void button0(){
         startActivity(new Intent(this, LayoutActivity.class));
@@ -28,8 +29,8 @@ public class MainPerformanceActivity extends Activity {
 
     @OnClick(R.id.show_dialog1)
     public void button1(){
-
     }
+
 
     @OnClick(R.id.show_dialog2)
     public void button2(){
