@@ -1,8 +1,6 @@
 apply plugin: 'com.android.library' //说明 module 的类型
 //apply plugin: 'com.jakewharton.butterknife'
 
-//apply plugin: 'android-aspectjx'
-
 //compileSdkVersion:编译版本，真正决定代码是否能编译的关键，比如设置成23，就无法使用httpclient,
 // 低版本编译出来的apk可以在高版本上运行，因为向下兼容，高版本编译的apk运行到低版本，
 
@@ -163,11 +161,6 @@ dependencies {
     // https://github.com/alibaba/fastjson
     api deps.fastjson
     api deps.gson
-
-    //aspectj
-    //https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
-    //https://eclipse.org/aspectj/
-    api deps.aspectj
 
     // ---------  logger begin  ------------
     api deps.logger

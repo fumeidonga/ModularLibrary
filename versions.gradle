@@ -179,9 +179,6 @@ versions.dagger                           = "2.19"
 versions.dagger_plugin                    = "1.8"
 
 //aspectj
-//https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
-versions.aspectjx                         = "2.0.5"
-
 //https://eclipse.org/aspectj/
 versions.aspectj                          = "1.9.3"
 
@@ -348,7 +345,6 @@ deps.google_auto_service                  = "com.google.auto.service:auto-servic
 deps.wechat_sdk_android_with_mta          = "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:$versions.wechat_sdk_android_with_mta"
 deps.filedownloader                       = "com.liulishuo.filedownloader:library:$versions.filedownloader"
 deps.filedownloader_okhttp                = "cn.dreamtobe.filedownloader:filedownloader-okhttp3-connection:$versions.filedownloader_okhttp"
-deps.aspectjx                             = "com.hujiang.aspectjx:gradle-android-plugin-aspectjx:$versions.aspectjx"
 deps.aspectj                              = "org.aspectj:aspectjrt:$versions.aspectj"
 ext.deps = deps
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.android.MarkdownUtils;
 import com.android.android.MainAndroidActivity;
+import com.android.performance.kadun.KaDunActivity;
 import com.android.performance.layout.LayoutActivity;
 import com.android.testdagger.R;
 
@@ -21,7 +22,6 @@ public class MainPerformanceActivity extends Activity {
         ButterKnife.bind(this);
     }
 
-//    @AopLog
     @OnClick(R.id.show_dialog)
     public void button(){
         MarkdownUtils.setData(this, "android/性能优化.MD");
@@ -34,6 +34,7 @@ public class MainPerformanceActivity extends Activity {
 
     @OnClick(R.id.show_dialog1)
     public void button1(){
+        startActivity(new Intent(this, KaDunActivity.class));
     }
 
 
