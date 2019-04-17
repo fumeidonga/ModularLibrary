@@ -82,17 +82,14 @@
 
 ### 3. 布局加载原理
 
-1. LayoutInflater 解析xml文件，然后从解析出来的对象里面进行view的创建，这里就涉及到IO的操作，这是一个性能点
-   
-    final View temp = createViewFromTag(root, name, inflaterContext, attrs);
+1. LayoutInflater 解析xml文件，然后从解析出来的对象里面进行view的创建，
+这里就涉及到IO的操作，这是一个性能点
 
+>  final View temp = createViewFromTag(root, name, inflaterContext, attrs);
 
    ![](https://github.com/fumeidonga/markdownPic/blob/master/performance/createviw1.png?raw=true)
-
-
+    代码如下：
    ![](https://github.com/fumeidonga/markdownPic/blob/master/performance/createveiw.png?raw=true)
-
-
 
 2. 当factory2 factory都为空，进入createView，里面用到了反射，这是一个性能点
 
@@ -112,19 +109,17 @@
 
 
 #### 2）AOP / ArtHook 方式
-切Activity的 setContentView() 方法，
-
+   切Activity的 setContentView() 方法，
 
     @Around("execution(* android.app.Activity.setContentView(..))")
 
 #### 3）获取任意控件加载耗时
-使用LayoutInflate Factory
+   使用LayoutInflate Factory
 
 
-### 5. 异步Inflate AsyncLayoutInflater
-首先添加support，
-
- "com.android.support：asynclayoutinflater:$versions.support"
+### 5. 优化方法
+#### 1） 异步Inflate AsyncLayoutInflater
+首先添加support，"com.android.support：asynclayoutinflater:$versions.support"
 
 android.support.v4.view.AsyncLayoutInflater
 
