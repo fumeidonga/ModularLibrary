@@ -157,6 +157,8 @@ dependencies {
     
     api deps.support.constraint_layout
 
+    api deps.support.asynclayoutinflater
+
     // ---------  fastjson begin  ------------
     // https://github.com/alibaba/fastjson
     api deps.fastjson

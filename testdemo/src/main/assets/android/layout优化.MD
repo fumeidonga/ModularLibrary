@@ -51,22 +51,22 @@
 
 3. Choreographer
 
-检测UI丢帧跟卡顿，网上的文章还是很多的
+    检测UI丢帧跟卡顿，网上的文章还是很多的
 
-<pre>
-public class FPSFrameCallback implements Choreographer.FrameCallback {
-    ....
-    @Override
-    public void doFrame(long frameTimeNanos) {
-        
-        //注册下一帧回调
-        Choreographer.getInstance().postFrameCallback(this);
-    }
-}
-
-Choreographer.getInstance().postFrameCallback(new FPSFrameCallback(System.nanoTime()));
-
-</pre>
+	<pre>
+	public class FPSFrameCallback implements Choreographer.FrameCallback {
+	    ....
+	    @Override
+	    public void doFrame(long frameTimeNanos) {
+	        
+	        //注册下一帧回调
+	        Choreographer.getInstance().postFrameCallback(this);
+	    }
+	}
+	
+	Choreographer.getInstance().postFrameCallback(new FPSFrameCallback(System.nanoTime()));
+	
+	</pre>
 
 
 [Choreographer](https://developer.android.com/reference/android/view/Choreographer)
@@ -82,21 +82,69 @@ Choreographer.getInstance().postFrameCallback(new FPSFrameCallback(System.nanoTi
 
 ### 3. 布局加载原理
 
-  1.  LayoutInflater 解析xml文件，然后从解析出来的对象里面进行view的创建，这里就涉及到IO的操作，这是一个性能点
+1. LayoutInflater 解析xml文件，然后从解析出来的对象里面进行view的创建，这里就涉及到IO的操作，这是一个性能点
    
     final View temp = createViewFromTag(root, name, inflaterContext, attrs);
 
 
    ![](https://github.com/fumeidonga/markdownPic/blob/master/performance/createviw1.png?raw=true)
 
-   ![](https://github.com/fumeidonga/markdownPic/blob/master/performance/createview.png?raw=true)
+
+   ![](https://github.com/fumeidonga/markdownPic/blob/master/performance/createveiw.png?raw=true)
+
+
 
 2. 当factory2 factory都为空，进入createView，里面用到了反射，这是一个性能点
 
-针对这两点， 我们可以：
+针对这两点， 我们可以异步Inflate：
 
-* LayoutInflater创建view的 Hook，
+ LayoutInflater创建view的 Hook，就是利用Factory来进行拦截，再做相应的处理
 
-* 定制创建view的过程: 全局替换自定义TextView等控件。
+ 定制创建view的过程: 全局替换自定义TextView等控件。
+
+
+### 4. 获取界面布局耗时
+
+获取每个界面的加载耗时
+
+#### 1）常规方式
+复写 setContentView(), 
+
+
+#### 2）AOP / ArtHook 方式
+切Activity的 setContentView() 方法，
+
+
+    @Around("execution(* android.app.Activity.setContentView(..))")
+
+#### 3）获取任意控件加载耗时
+使用LayoutInflate Factory
+
+
+### 5. 异步Inflate AsyncLayoutInflater
+首先添加support，
+
+ "com.android.support：asynclayoutinflater:$versions.support"
+
+android.support.v4.view.AsyncLayoutInflater
+
+异步inflate主要解决xml读取以及view从创建过程慢，使用workThread加载布局文件，加载完后回调主线程，直接返回View
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

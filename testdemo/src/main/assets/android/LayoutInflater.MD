@@ -67,7 +67,7 @@ root；
 > 而且这个布局根节点的android:layout_参数会被解析用来设置View的大小
 
 
-#### 原理
+#### LyoutInflater 原理
 
 其实就是从根节点开始，递归解析xml的每个节点，每一步递归的过程是：
 通过节点名称（全类名），使用ClassLoader创建对应类的实例，也就是View，
@@ -77,3 +77,52 @@ root；
 个包含了所有解析好的子View的布局根View。
 
 
+#### LyoutInflater Factory
+
+Factory2 比Factory多一个参数， View parent,也就是创建的view的父view
+<pre>
+
+    public interface Factory {
+        public View onCreateView(String name, Context context, AttributeSet attrs);
+    }
+    
+    public interface Factory2 extends Factory {
+        /**
+         * Version of {@link #onCreateView(String, Context, AttributeSet)}
+         * that also supplies the parent that the view created view will be
+         * placed in.
+         *
+         * @param parent The parent that the created view will be placed 
+         * in; <em>note that this may be null</em>.
+         * @param name Tag name to be inflated.
+         * @param context The context the view is being created in.
+         * @param attrs Inflation attributes as specified in XML file.
+         *
+         * @return View Newly created view. Return null for the default
+         *         behavior.
+         */
+        public View onCreateView(View parent, String name, Context context, AttributeSet attrs);
+    }
+</pre>
+
+实际项目中的用处：
+
+* 全局替换字体等属性
+
+* 动态换肤功能
+
+* 无需编写shape、selector，直接在xml设置值 等
+
+* 提高view构建的效率
+
+   例如 可以直接new出自定义view，避免系统反射调用，提高view创建速度
+
+* 替换默认View的实现
+
+* 在Activity的onCreateView()回调中实现我们自己的逻辑
+
+
+
+##### LayoutInflater Factory 注意点
+
+* LayoutInflater Factoty有一个限制，只能被设置一次。如果被多次设置会抛出异常

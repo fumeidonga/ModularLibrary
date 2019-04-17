@@ -213,6 +213,9 @@ support.preference_v7                     = "com.android.support:preference-v7:$
 //百分比
 support.preference                        = "com.android.support:percent:$versions.support"
 
+//异步flate
+support.asynclayoutinflater               = "com.android.support:asynclayoutinflater:$versions.support"
+
 //v8
 
 //v13
