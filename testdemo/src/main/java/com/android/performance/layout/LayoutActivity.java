@@ -1,7 +1,6 @@
 package com.android.performance.layout;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.MarkdownUtils;
@@ -21,41 +20,42 @@ public class LayoutActivity extends Activity {
 
     @OnClick(R.id.show_dialog0)
     public void button0(){
-        MarkdownUtils.setData(this, "android/Android绘制原理.MD");
+        MarkdownUtils.setData(this, "android/performace/Android绘制原理.MD");
     }
 
     @OnClick(R.id.show_dialog1)
     public void button1(){
-        MarkdownUtils.setData(this, "android/Android硬件加速原理.MD");
+        MarkdownUtils.setData(this, "android/performace/Android硬件加速原理.MD");
 
     }
 
     @OnClick(R.id.show_dialog2)
     public void button2(){
-        MarkdownUtils.setData(this, "android/layout优化.MD");
+        MarkdownUtils.setData(this, "android/performace/layout优化.MD");
 
     }
 
     @OnClick(R.id.show_dialog3)
     public void button3(){
-        MarkdownUtils.setData(this, "android/LayoutInflater.MD");
+        MarkdownUtils.setData(this, "android/performace/LayoutInflater.MD");
 
     }
 
     @OnClick(R.id.show_dialog4)
     public void button4(){
 
-        MarkdownUtils.setData(this, "android/view的绘制原理.MD");
+        MarkdownUtils.setData(this, "android/performace/view的绘制原理.MD");
     }
 
     @OnClick(R.id.show_dialog5)
     public void button5(){
-        MarkdownUtils.setData(this, "android/事件分发.md");
+        MarkdownUtils.setData(this, "android/performace/事件分发.md");
 
     }
 
     @OnClick(R.id.show_dialog6)
     public void button6(){
+        MarkdownUtils.setData(this, "android/performace/CPU_GPU.MD");
 
     }
 

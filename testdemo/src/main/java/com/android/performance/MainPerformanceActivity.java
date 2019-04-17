@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.MarkdownUtils;
-import com.android.android.MainAndroidActivity;
 import com.android.performance.kadun.KaDunActivity;
 import com.android.performance.layout.LayoutActivity;
 import com.android.testdagger.R;
@@ -24,7 +23,7 @@ public class MainPerformanceActivity extends Activity {
 
     @OnClick(R.id.show_dialog)
     public void button(){
-        MarkdownUtils.setData(this, "android/性能优化.MD");
+        MarkdownUtils.setData(this, "android/performace/性能优化.MD");
     }
 
     @OnClick(R.id.show_dialog0)
