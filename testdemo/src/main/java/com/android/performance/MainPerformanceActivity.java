@@ -34,12 +34,12 @@ public class MainPerformanceActivity extends Activity {
 
     @OnClick(R.id.show_dialog1)
     public void button1(){
-        startActivity(new Intent(this, KaDunActivity.class));
     }
 
 
     @OnClick(R.id.show_dialog2)
     public void button2(){
+        startActivity(new Intent(this, KaDunActivity.class));
 
     }
 

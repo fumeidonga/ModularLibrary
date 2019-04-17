@@ -23,10 +23,10 @@ public class SingletonModule {
     }
 
     public void testClass() throws Exception{
-        Class classd = SingletonModule.class;
+        /*Class classd = SingletonModule.class;
         Constructor constructor = classd.getDeclaredConstructor(null);
         constructor.setAccessible(true);
-        SingletonModule singletonModule =  (SingletonModule)constructor.newInstance(null);
+        SingletonModule singletonModule =  (SingletonModule)constructor.newInstance(null);*/
     }
 
 

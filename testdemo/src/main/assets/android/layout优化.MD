@@ -159,13 +159,37 @@ APT编译期间，将XML翻译成java代码
     annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
     implementation 'com.zhangyue.we:x2c-lib:1.0.6'
 
+> 问题
+
+部分属性不支持 (可以修改X2C框架)
+
+失去系统兼容性
+
+
+#### 3） 优化布局层级及复杂度
+
+view的绘制流程： measure 、layout、 draw
+
+* 减少层级
+
+* 布局view group的选择
+
+* merge
+
+* viewstub
+
+* onDraw 中避免耗时
 
 
 
+#### 4） 避免过度绘制
 
+* 去掉多余背景色，减少复杂shape使用
 
+* 避免层级叠加
 
+* 自定义view使用clipRect 屏蔽被遮盖的view绘制
 
+    使用clipRect指定绘制区域，告诉系统哪些需要绘制，哪些不需要
 
-
-
+    canvas.clipRect(...)
