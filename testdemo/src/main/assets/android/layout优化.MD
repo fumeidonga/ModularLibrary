@@ -122,12 +122,33 @@
 首先添加support，"com.android.support：asynclayoutinflater:$versions.support"
 
 android.support.v4.view.AsyncLayoutInflater
+> 作用
 
-异步inflate主要解决xml读取以及view从创建过程慢，使用workThread加载布局文件，加载完后回调主线程，直接返回View
+异步inflate主要解决xml读取以及view从创建过程慢，用来解析繁重复杂的布局文件
+
+AsyncLayoutInflater使用workThread加载布局文件，加载完后回调主线程，直接返回View
+
+> 限制条件
+<pre>
+1. 使用异步 inflate，那么需要这个 layout 的 parent 的 generateLayoutParams 函数是线程安全的；
+2. 所有构建的 View 中必须不能创建 Handler 或者是调用 Looper.myLooper；
+（因为是在异步线程中加载的，异步线程默认没有调用 Looper.prepare ）；
+3. 异步转换出来的 View 并没有被加到 parent view中，AsyncLayoutInflater 是调用了 LayoutInflater.inflate(int, ViewGroup, false)，因此如果需要加到 parent view 中，就需要我们自己手动添加；
+4. AsyncLayoutInflater 不支持设置 LayoutInflater.Factory 或者 LayoutInflater.Factory2；
+5. 不支持加载包含 Fragment 的 layout；
+6. 如果 AsyncLayoutInflater 失败，那么会自动回退到UI线程来加载布局；</pre>
+
+   这种方式只是缓解IO,反射等问题，并没有从根本上解决
+
+[AsyncLayoutInflater 限制及改进](https://www.jianshu.com/p/f0c0eda06ae4)
 
 
+#### 2） X2C框架
+从根本上解决IO,反射问题
 
+> 原理
 
+APT编译期间，将XML翻译成java代码
 
 
 

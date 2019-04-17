@@ -126,3 +126,11 @@ Factory2 比Factory多一个参数， View parent,也就是创建的view的父vi
 ##### LayoutInflater Factory 注意点
 
 * LayoutInflater Factoty有一个限制，只能被设置一次。如果被多次设置会抛出异常
+
+[LayoutInflater Factory 源码解析](https://www.jianshu.com/p/9c16bbaee442)
+
+[LayoutInflater 源码解析](https://www.jianshu.com/p/f0f3de2f63e3)
+
+[setContentView 源码解析](https://www.jianshu.com/p/00a6d391569e)
+
+[AsyncLayoutInflater 源码解析](https://www.jianshu.com/p/a3a3bd314c45)
