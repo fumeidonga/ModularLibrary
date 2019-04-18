@@ -115,7 +115,7 @@ public class DesignModelActivity extends Activity {
     @OnClick(R.id.bottom6)
     public void begin6(){
 
-        MarkdownUtils.setData(this, "testdesignmodel/template/装饰.MD");
+        MarkdownUtils.setData(this, "testdesignmodel/decorator/装饰.MD");
     }
 
     public boolean isClick ;
