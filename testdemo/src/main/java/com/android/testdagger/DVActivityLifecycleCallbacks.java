@@ -21,18 +21,18 @@ public class DVActivityLifecycleCallbacks implements Application.ActivityLifecyc
 
 
     public DVActivityLifecycleCallbacks() {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
     }
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
 //        UIUtils.setCustomDensity(activity,activity.getApplication());
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
     }
 
     @Override
     public void onActivityStarted(Activity activity) {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
         // 每有一个activity可见都会走该方法，mVisibleActivityCount会增1。
         mVisibleActivityCount++;
         if (mVisibleActivityCount == 1) {
@@ -52,18 +52,18 @@ public class DVActivityLifecycleCallbacks implements Application.ActivityLifecyc
 
     @Override
     public void onActivityResumed(Activity activity) {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
 
     }
 
     @Override
     public void onActivityPaused(Activity activity) {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
     }
 
     @Override
     public void onActivityStopped(final Activity activity) {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
         //每有一个acitivity不可见都会走该方法，让mVisibleActivityCount减1。
         mVisibleActivityCount--;
         if (mVisibleActivityCount == 0) {
@@ -78,12 +78,12 @@ public class DVActivityLifecycleCallbacks implements Application.ActivityLifecyc
 
     @Override
     public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
 
     }
 
     @Override
     public void onActivityDestroyed(Activity activity) {
-        DVLogUtils.dt();
+        //DVLogUtils.dt();
     }
 }

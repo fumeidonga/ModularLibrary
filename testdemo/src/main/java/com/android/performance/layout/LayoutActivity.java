@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.android.MarkdownUtils;
+import com.android.modulcommons.utils.DVLogUtils;
 import com.android.testdagger.R;
 
 import butterknife.ButterKnife;
@@ -13,9 +14,12 @@ public class LayoutActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        DVLogUtils.dt(1);
         super.onCreate(savedInstanceState);
+        DVLogUtils.dt(2);
         setContentView(R.layout.activity_layout);
         ButterKnife.bind(this);
+        DVLogUtils.dt(3);
     }
 
     @OnClick(R.id.show_dialog0)

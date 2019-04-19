@@ -168,6 +168,10 @@ dependencies {
     // ---------  butterknife begin  ------------
 //    apply plugin: 'com.jakewharton.butterknife'
     /*
+
+    classpath deps.butterknife_plugin
+
+
     implementation (deps.butterknife){
         exclude group: 'com.android.support', module: 'support-compat'
     }
@@ -185,6 +189,14 @@ dependencies {
     annotationProcessor deps.dagger.compiler
     */
 
-    //
+    //lancet
+    /*
+    classpath deps.lancet_plugin
+    apply plugin: 'me.ele.lancet'
+
+    dependencies {
+        provided deps.lancet
+    }
+    */
 
 }

@@ -12,4 +12,9 @@ public class JavaMainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_main);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

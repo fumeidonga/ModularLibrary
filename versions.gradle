@@ -182,6 +182,10 @@ versions.dagger_plugin                    = "1.8"
 //https://eclipse.org/aspectj/
 versions.aspectj                          = "1.9.3"
 
+//Lancet
+//https://github.com/eleme/lancet
+versions.lancet                          = "1.0.4"
+
 
 def deps = [:]
 
@@ -346,6 +350,8 @@ deps.wechat_sdk_android_with_mta          = "com.tencent.mm.opensdk:wechat-sdk-a
 deps.filedownloader                       = "com.liulishuo.filedownloader:library:$versions.filedownloader"
 deps.filedownloader_okhttp                = "cn.dreamtobe.filedownloader:filedownloader-okhttp3-connection:$versions.filedownloader_okhttp"
 deps.aspectj                              = "org.aspectj:aspectjrt:$versions.aspectj"
+deps.lancet_plugin                        = "me.ele:lancet-plugin:$versions.lancet"
+deps.lancet                               = "me.ele:lancet-base:$versions.lancet"
 ext.deps = deps
 
 def addRepos(RepositoryHandler handler) {
