@@ -275,6 +275,13 @@ public class DVLogUtils {
 	//----------------------------------logger end-----------------------------------------
 
 	//---------------------------------------------------------------------------
+
+	public static void resetTime() {
+		if (timeMillions == 0L) {
+			timeMillions = System.currentTimeMillis();
+		}
+	}
+
 	public static void dt() {
 		if (!isDebug)
 			return;
