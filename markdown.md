@@ -135,9 +135,15 @@ markdown支持html，
 
 [id]:http://markdownpad.com 'title here'
 
+## 文字颜色 && 字体大小
+浅红色文字：<font color="#dd0000">浅红色文字：</font><br /> 
 
+深红色文字：<font color="#660000">深红色文字</font><br /> 
 
-***
+<font size="10">size为1</font><br /> 
+
+<table><tr><td bgcolor=#FF00FF>背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
+
 ## 强调
 *一个号的强调*
 

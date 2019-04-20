@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.android.MarkdownUtils;
 import com.android.performance.kadun.KaDunActivity;
 import com.android.performance.layout.LayoutActivity;
+import com.android.performance.memory.MemoryActivity;
 import com.android.testdagger.R;
 
 import butterknife.ButterKnife;
@@ -33,6 +34,7 @@ public class MainPerformanceActivity extends Activity {
 
     @OnClick(R.id.show_dialog1)
     public void button1(){
+        startActivity(new Intent(this, MemoryActivity.class));
     }
 
 
