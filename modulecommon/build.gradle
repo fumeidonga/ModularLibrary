@@ -189,7 +189,7 @@ dependencies {
     annotationProcessor deps.dagger.compiler
     */
 
-    //lancet
+    //lancet aop 编程切入方案
     /*
     classpath deps.lancet_plugin
     apply plugin: 'me.ele.lancet'
@@ -198,5 +198,9 @@ dependencies {
         provided deps.lancet
     }
     */
+
+
+    //自动化检测
+//    implementation deps.blockcanary
 
 }

@@ -50,6 +50,7 @@ dependencies {
     annotationProcessor deps.dagger.compiler
 
     implementation deps.lancet
+    implementation deps.blockcanary
 
     implementation(deps.butterknife) {
         exclude group: 'com.android.support', module: 'support-compat'

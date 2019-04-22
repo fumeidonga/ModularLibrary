@@ -186,6 +186,10 @@ versions.aspectj                          = "1.9.3"
 //https://github.com/eleme/lancet
 versions.lancet                          = "1.0.4"
 
+//AndroidPerformanceMonitor
+//https://github.com/markzhai/AndroidPerformanceMonitor
+versions.blockcanary                     = "1.5.0"
+
 
 def deps = [:]
 
@@ -352,6 +356,7 @@ deps.filedownloader_okhttp                = "cn.dreamtobe.filedownloader:filedow
 deps.aspectj                              = "org.aspectj:aspectjrt:$versions.aspectj"
 deps.lancet_plugin                        = "me.ele:lancet-plugin:$versions.lancet"
 deps.lancet                               = "me.ele:lancet-base:$versions.lancet"
+deps.blockcanary                          = "com.github.markzhai:blockcanary-android:$versions.blockcanary"
 ext.deps = deps
 
 def addRepos(RepositoryHandler handler) {

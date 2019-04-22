@@ -14,8 +14,10 @@ import android.support.v4.app.Fragment;
 
 import com.android.modulcommons.DVBaseApplication;
 import com.android.modulcommons.utils.DVLogUtils;
+import com.android.performance.blockcanary.AppBlockCanaryContext;
 import com.android.testdagger.activitys.method_inject.itest.Test1;
 import com.android.testdagger.dagger.component.DaggerAppComponent;
+import com.github.moduth.blockcanary.BlockCanary;
 
 import javax.inject.Inject;
 
@@ -58,6 +60,10 @@ public class AppApplication extends DVBaseApplication implements HasActivityInje
         mContext = getApplicationContext();
         DVLogUtils.dt(test1);
         registerActivityLifecycleCallback();
+
+
+        ///target sdk 23以下才能用
+        //BlockCanary.install(this, new AppBlockCanaryContext()).start();
     }
 
     @Override
@@ -120,6 +126,10 @@ public class AppApplication extends DVBaseApplication implements HasActivityInje
     }
     // 获取到主线程的上下文
     private static Context mContext;
+
+    public static Context getAppContext(){
+        return mContext;
+    }
 
     public static SharedPreferences preferences() {
         if(sharedPreferences == null) {
