@@ -57,7 +57,7 @@ public class LancetFragmentHook {
     @Proxy("d")
     @TargetClass("android.util.Log")
     public static int ddd(String tag, String msg) {
-        msg = " hook Log.d" + msg ;
+        msg = " hook Log.d " + msg ;
         //DVLogUtils.et(msg);
         return (int) Origin.call();
     }

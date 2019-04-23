@@ -50,6 +50,15 @@ public class DVDateUtil {
 	}
 
 	/**
+	 * 获取当前的时间 格式化：YYYY-MM-DD
+	 *
+	 * @return 获取当前的格式化后的时间
+	 */
+	public static String getFileFolderNameByTime() {
+		return formatYMD.format(new Date());
+	}
+
+	/**
 	 * 获取当前的时间
 	 * 
 	 * @return 当前的时间YYY-MM-DD HH-MM-SS

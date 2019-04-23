@@ -14,15 +14,13 @@ import android.support.v4.app.Fragment;
 
 import com.android.modulcommons.DVBaseApplication;
 import com.android.modulcommons.utils.DVLogUtils;
-import com.android.performance.blockcanary.AppBlockCanaryContext;
+import com.android.modulcommons.performance.uiwatch.AppUiWatcher;
 import com.android.testdagger.activitys.method_inject.itest.Test1;
 import com.android.testdagger.dagger.component.DaggerAppComponent;
-import com.github.moduth.blockcanary.BlockCanary;
 
 import javax.inject.Inject;
 
 import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
 import dagger.android.HasBroadcastReceiverInjector;
@@ -64,6 +62,12 @@ public class AppApplication extends DVBaseApplication implements HasActivityInje
 
         ///target sdk 23以下才能用
         //BlockCanary.install(this, new AppBlockCanaryContext()).start();
+
+//        BlockDetectByChoreographer.start();
+
+//        Choreographer.getInstance().postFrameCallback(new MyChoreographerFrameCallback());
+
+        AppUiWatcher.getInstance().cacheSize(10).minSkipFrameCount(1).startWatch();
     }
 
     @Override

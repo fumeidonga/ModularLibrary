@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.MarkdownUtils;
+import com.android.modulcommons.utils.DVLogUtils;
 import com.android.performance.kadun.KaDunActivity;
 import com.android.performance.layout.LayoutActivity;
 import com.android.performance.memory.MemoryActivity;
@@ -20,6 +21,12 @@ public class MainPerformanceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_performance);
         ButterKnife.bind(this);
+        //用来测试卡顿监听
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @OnClick(R.id.show_dialog)
@@ -46,7 +53,13 @@ public class MainPerformanceActivity extends Activity {
 
     @OnClick(R.id.show_dialog3)
     public void button3(){
-
+        //用来测试卡顿监听
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        DVLogUtils.dt("");
     }
 
     @OnClick(R.id.show_dialog4)
