@@ -93,8 +93,6 @@ public class AppChoreoFrameCallback implements Choreographer.FrameCallback {
             ThreadLogMonitor.getInstance().removeMonitor();
         }
         ThreadLogMonitor.getInstance().startMonitor();
-        Choreographer.getInstance().postFrameCallback(this);
-
 
         //将当前的时间设置为last时间,用于下次计算,并重新注册
         lastFrameTimeNanos = frameTimeNanos;

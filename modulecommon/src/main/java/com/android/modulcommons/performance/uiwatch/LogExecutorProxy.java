@@ -43,6 +43,7 @@ public class LogExecutorProxy extends AbsLogExecutor {
     private void init() {
         logExecutor = LogExecutorExecutor.getInstance();
         mLogHandlerThread = new HandlerThread(TAG + "_Thread");
+        mLogHandlerThread.start();
 
         mLogHandler = new Handler(mLogHandlerThread.getLooper()) {
             @Override
@@ -84,7 +85,6 @@ public class LogExecutorProxy extends AbsLogExecutor {
             init();
         }
         logExecutor.start();
-        mLogHandlerThread.start();
         sendObtainActionMessage(TYPE_ACTION_COLLECTION_LOG, 0, null);
     }
 
@@ -186,6 +186,13 @@ public class LogExecutorProxy extends AbsLogExecutor {
     public void setKeyWords(String[] keyWords) {
         if (logExecutor != null) {
             logExecutor.setKeyWords(keyWords);
+        }
+    }
+    /**
+     */
+    public void setExcludekeyWordsKeyWords(String[] keyWords) {
+        if (logExecutor != null) {
+            logExecutor.setExcludekeyWordsKeyWords(keyWords);
         }
     }
 

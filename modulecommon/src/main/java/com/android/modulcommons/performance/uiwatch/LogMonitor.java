@@ -131,4 +131,15 @@ public class LogMonitor {
         }
         return this;
     }
+    /**
+     * 设置排除关键词
+     *
+     * @param keyWords 关键词集合
+     */
+    public LogMonitor setExcludekeyWordsKeyWords(String[] keyWords) {
+        if (logMonitorProxy != null) {
+            logMonitorProxy.setExcludekeyWordsKeyWords(keyWords);
+        }
+        return this;
+    }
 }

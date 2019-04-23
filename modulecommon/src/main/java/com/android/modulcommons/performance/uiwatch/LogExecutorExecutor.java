@@ -250,14 +250,20 @@ public class LogExecutorExecutor extends AbsLogExecutor {
      * 校验信息是否有效
      */
     private boolean checkInfoUseful(String info) {
-        //未设置关键词默认为全通过
-        if (keyWords == null || keyWords.length == 0) {
-            return true;
-        }
+
         //校验内容是否有效,无效直接
         if (TextUtils.isEmpty(info)) {
             return false;
         }
+
+        //未设置关键词默认为全通过
+        if (keyWords == null || keyWords.length == 0) {
+            return true;
+        }
+        //过滤信息
+        /*if (excludekeyWords == null || excludekeyWords.length == 0) {
+            return true;
+        }*/
         //校验是否包含关键词,包含返回true,反之返回false
         for (String keyWord : keyWords) {
             if (info.contains(keyWord)) {

@@ -65,6 +65,7 @@ public abstract class AbsLogExecutor {
      * 关键词
      */
     String[] keyWords = null;
+    String[] excludekeyWords = null;
     //------------- type config-------------------
 
     /**
@@ -134,5 +135,13 @@ public abstract class AbsLogExecutor {
      */
     public void setKeyWords(String[] keyWords) {
         this.keyWords = keyWords;
+    }
+    /**
+     * 设置过滤关键词 （排除不是关键词内的内容）
+     *
+     * @param excludekeyWords 关键词
+     */
+    public void setExcludekeyWordsKeyWords(String[] excludekeyWords) {
+        this.excludekeyWords = excludekeyWords;
     }
 }

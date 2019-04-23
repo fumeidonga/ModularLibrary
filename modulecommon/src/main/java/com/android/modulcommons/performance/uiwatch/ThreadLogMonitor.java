@@ -15,9 +15,9 @@ import java.lang.reflect.Method;
  */
 public class ThreadLogMonitor {
     private static ThreadLogMonitor sInstance = new ThreadLogMonitor();
-    private HandlerThread mLogThread = new HandlerThread("卡顿检测");
+    private HandlerThread mLogThread = new HandlerThread("线程卡顿检测");
     private Handler mIoHandler;
-    private static final long TIME_BLOCK = 1000L;
+    private static final long TIME_BLOCK = 510L;
 
     private ThreadLogMonitor() {
         mLogThread.start();
@@ -28,6 +28,7 @@ public class ThreadLogMonitor {
         @Override
         public void run() {
             StringBuilder sb = new StringBuilder();
+            sb.append("线程卡顿检测");
             StackTraceElement[] stackTrace = Looper.getMainLooper().getThread().getStackTrace();
             for (StackTraceElement s : stackTrace) {
                 sb.append(s.toString() + "\n");

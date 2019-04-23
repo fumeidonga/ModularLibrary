@@ -58,7 +58,7 @@ public class DVLogUtils {
 	public static boolean allowI = true;
 	public static boolean allowV = true;
 	public static boolean allowW = true;
-	public static boolean savelog = false;
+	public static boolean savelog = true;
 
 	/**
 	 * 文字最大限制
@@ -364,6 +364,7 @@ public class DVLogUtils {
 				writer.close();
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
