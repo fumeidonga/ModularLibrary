@@ -203,4 +203,8 @@ dependencies {
     //自动化检测
 //    implementation deps.blockcanary
 
+    //anrwatchdog
+    //new ANRWatchDog().start();
+//    implementation deps.anrwatchdog
+
 }

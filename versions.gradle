@@ -190,6 +190,10 @@ versions.lancet                          = "1.0.4"
 //https://github.com/markzhai/AndroidPerformanceMonitor
 versions.blockcanary                     = "1.5.0"
 
+//ANR-Watchdog
+//https://github.com/SalomonBrys/ANR-WatchDog
+versions.anrwatchdog                     = "1.4.0"
+
 
 def deps = [:]
 
@@ -357,6 +361,7 @@ deps.aspectj                              = "org.aspectj:aspectjrt:$versions.asp
 deps.lancet_plugin                        = "me.ele:lancet-plugin:$versions.lancet"
 deps.lancet                               = "me.ele:lancet-base:$versions.lancet"
 deps.blockcanary                          = "com.github.markzhai:blockcanary-android:$versions.blockcanary"
+deps.anrwatchdog                          = "com.github.anrwatchdog:anrwatchdog:$versions.anrwatchdog"
 ext.deps = deps
 
 def addRepos(RepositoryHandler handler) {
