@@ -37,9 +37,9 @@ ext.build_versions = build_versions
 def versions = [:]
 //test
 versions.junit                            = "4.12"
-versions.espresso                         = "3.0.1"
-versions.atsl_runner = "1.0.1"
-versions.atsl_rules = "1.0.1"
+versions.espresso                         = "3.0.2"
+versions.atsl_runner = "1.0.2"
+versions.atsl_rules = "1.0.2"
 
 //https://site.mockito.org/
 //https://github.com/mockito/mockito
@@ -317,6 +317,7 @@ deps.fresco_imagepipeline_okhttp3         = "com.facebook.fresco:imagepipeline-o
 deps.fresco_animatedgif                   = "com.facebook.fresco:animated-gif:$versions.fresco"
 deps.dexmaker                             = "com.linkedin.dexmaker:dexmaker-mockito:$versions.dexmaker"
 deps.junit                                = "junit:junit:$versions.junit"
+deps.androidjunitrunner                   = "android.support.test.runner.AndroidJUnitRunner"
 deps.hamcrest                             = "org.hamcrest:hamcrest-all:$versions.hamcrest"
 deps.android_gradle_plugin                = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.gson                                 = "com.google.code.gson:gson:$versions.gson"

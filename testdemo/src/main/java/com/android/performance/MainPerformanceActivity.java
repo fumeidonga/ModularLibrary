@@ -23,8 +23,8 @@ public class MainPerformanceActivity extends Activity {
         ButterKnife.bind(this);
         //用来测试卡顿监听
         try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
+            //Thread.sleep(1000);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -55,8 +55,8 @@ public class MainPerformanceActivity extends Activity {
     public void button3(){
         //用来测试卡顿监听
         try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
+            //Thread.sleep(1000);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         DVLogUtils.dt("");

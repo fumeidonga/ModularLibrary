@@ -31,7 +31,7 @@ android {
         versionCode build_versions.version_code
         versionName build_versions.version_name
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner deps.androidjunitrunner
 
     }
 
