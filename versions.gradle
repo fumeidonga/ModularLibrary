@@ -16,6 +16,18 @@
 
 /** [ADMIN] RUN update_version.sh AFTER CHANGING THIS FILE **/
 
+//compileSdkVersion:编译版本，真正决定代码是否能编译的关键，比如设置成23，就无法使用httpclient,
+// 低版本编译出来的apk可以在高版本上运行，因为向下兼容，高版本编译的apk运行到低版本，
+
+//buildToolsVersion：编译工具的版本，一般设置为最新即可
+//兼容包得版本一般要配置跟编译版本一致，比如编译版本配置为22，v7兼容包也要配置为22，否则会出错
+
+// minSdkVersion的也没有问题，因为编译时就会考虑兼容性，低版本会有v4,v7这些兼容包
+//minSdkVersion：最小支持版本，比如设置成15，就无法在低于15的版本运行
+
+//targetSdkVersion：只是一个标示，如果targetSdkVersion与目标设备的API版本相同时，
+// 运行效率可能会高一些，编译阶段没有实质性作用
+
 /**
  * Shared file between builds so that they can all use the same dependencies and
  * maven repositories.
@@ -153,7 +165,7 @@ versions.mcxiaoke_packer_helper           = "1.0.8"
 versions.nineoldandroids                  = "2.4.0"
 
 //https://github.com/yanzhenjie/AndPermission
-versions.easypermissions                  = "2.0.0-rc11"
+versions.easypermissions                  = "2.0.1"
 
 versions.airbnb_lottie                    = "2.2.5"
 
@@ -349,7 +361,7 @@ deps.bugly_crashreport_upgrade            = "com.tencent.bugly:crashreport_upgra
 deps.buglg_nativecrashreport              = "com.tencent.bugly:nativecrashreport:$versions.bugly_nativecrashreport"
 deps.mcxiaoke_packer_helper               = "com.mcxiaoke.gradle:packer-helper:$versions.mcxiaoke_packer_helper"
 deps.nineoldandroids                      = "com.nineoldandroids:library:$versions.nineoldandroids"
-deps.easypermissions                      = "com.yanzhenjie:permission:$versions.easypermissions"
+deps.easypermissions                      = "com.yanzhenjie.permission:support:$versions.easypermissions"
 deps.airbnb_lottie                        = "com.airbnb.android:lottie:$versions.airbnb_lottie"
 deps.greendao                             = "org.greenrobot:greendao:$versions.greendao"
 deps.java_websocket                       = "org.java-websocket:Java-WebSocket:$versions.java_websocket"
