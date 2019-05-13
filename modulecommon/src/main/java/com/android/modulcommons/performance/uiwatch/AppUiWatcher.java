@@ -1,6 +1,7 @@
 package com.android.modulcommons.performance.uiwatch;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.text.TextUtils;
 import android.view.Choreographer;
 
@@ -166,7 +167,7 @@ public class AppUiWatcher {
      * 用于开启监听，必执行方法！！
      */
     @SuppressLint("NewApi")
-    public void startWatch() {
+    public void startWatch(Context context) {
         if (isWatching) {
             return;
         }
@@ -197,6 +198,7 @@ public class AppUiWatcher {
         Choreographer.getInstance().postFrameCallback(frameCallback);
 
         LogMonitor.getInstance().startMonitor();
+        NormalMonitor.getInstance().start(context);
     }
 
     @SuppressLint("NewApi")

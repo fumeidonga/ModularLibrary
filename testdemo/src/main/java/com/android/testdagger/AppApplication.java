@@ -67,7 +67,7 @@ public class AppApplication extends DVBaseApplication implements HasActivityInje
 
 //        Choreographer.getInstance().postFrameCallback(new MyChoreographerFrameCallback());
 
-        AppUiWatcher.getInstance().cacheSize(10).minSkipFrameCount(1).startWatch();
+        AppUiWatcher.getInstance().cacheSize(10).minSkipFrameCount(1).startWatch(this);
     }
 
     @Override

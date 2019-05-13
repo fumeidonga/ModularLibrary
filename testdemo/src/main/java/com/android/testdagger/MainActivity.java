@@ -114,11 +114,14 @@ public class MainActivity extends Activity {
         if(mScreenOnOffReceiver == null) {
             mScreenOnOffReceiver = new ScreenOnOffReceiver();
         }
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_SCREEN_ON);
-        filter.addAction(Intent.ACTION_SCREEN_OFF);
-        filter.addAction(Intent.ACTION_USER_PRESENT);
-        registerReceiver(mScreenOnOffReceiver, filter);
+        try {
+            IntentFilter filter = new IntentFilter();
+            filter.addAction(Intent.ACTION_SCREEN_ON);
+            filter.addAction(Intent.ACTION_SCREEN_OFF);
+            filter.addAction(Intent.ACTION_USER_PRESENT);
+            registerReceiver(mScreenOnOffReceiver, filter);
+        } catch (Exception e) {
+        }
     }
 
     @Override
